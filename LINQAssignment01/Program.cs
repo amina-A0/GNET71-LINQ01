@@ -47,6 +47,22 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q4
+
+            var productsByPrice = ProductList.Where(
+                p => p.UnitPrice >= 10 && p.UnitPrice <= 30
+            );
+
+            foreach (var p in productsByPrice)
+            {
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            }
+
+            #endregion
+
+
+
+
         }
     }
 }
