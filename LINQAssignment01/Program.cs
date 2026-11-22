@@ -60,7 +60,20 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q5
 
+            var availableCondiments = ProductList.Where(
+                p => p.UnitsInStock > 0 && p.Category == "Condiments"
+            );
+
+            foreach (var p in availableCondiments)
+            {
+                Console.WriteLine(
+                    $"{p.ProductName} - Stock: {p.UnitsInStock}"
+                );
+            }
+
+            #endregion
 
 
         }
