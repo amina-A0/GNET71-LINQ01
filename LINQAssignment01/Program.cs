@@ -94,6 +94,19 @@ namespace LINQAssignment01
             }
 
             #endregion
+
+            #region Q7
+
+            var productsWithIndex = ProductList.Select(
+                (p, index) => $"{index + 1}. {p.ProductName}"
+            );
+
+            foreach (var item in productsWithIndex)
+            {
+                Console.WriteLine(item);
+            }
+
+            #endregion
         }
     }
 }
