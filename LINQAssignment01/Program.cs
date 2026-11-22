@@ -193,7 +193,19 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q13
 
+            var reversedWords = Arr
+                .Where(w => w.Length > 1 && char.ToLower(w[1]) == 'i')
+                .Reverse()
+                .ToList();
+
+            foreach (var word in reversedWords)
+            {
+                Console.WriteLine(word);
+            }
+
+            #endregion
         }
     }
 }
