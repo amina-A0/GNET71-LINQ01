@@ -138,7 +138,25 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q10
 
+            var recentOrders =
+                from o in OrderList
+                where o.OrderDate.Year >= 1997
+                select new
+                {
+                    o.CustomerID,
+                    o.OrderDate
+                };
+
+            foreach (var order in recentOrders)
+            {
+                Console.WriteLine(
+                    $"CustomerID: {order.CustomerID}, OrderDate: {order.OrderDate}"
+                );
+            }
+
+            #endregion
 
 
 
