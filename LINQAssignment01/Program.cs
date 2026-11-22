@@ -75,7 +75,25 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q6
 
+            var productStatus = ProductList.Select(p => new
+            {
+                Name = p.ProductName,
+                Price = p.UnitPrice,
+                StockStatus = p.UnitsInStock > 0
+                    ? "Available"
+                    : "Out of Stock"
+            });
+
+            foreach (var p in productStatus)
+            {
+                Console.WriteLine(
+                    $"Name: {p.Name}, Price: {p.Price}, Status: {p.StockStatus}"
+                );
+            }
+
+            #endregion
         }
     }
 }
