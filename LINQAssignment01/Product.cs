@@ -4,7 +4,11 @@ using System.Text;
 
 namespace LINQAssignment01
 {
-    internal class Product
+    public class Product
     {
+        public string ProductName { get; set; } = string.Empty;
+        public string Category { get; set; } = string.Empty;
+        public decimal UnitPrice { get; set; }
+        public int UnitsInStock { get; set; }
     }
 }

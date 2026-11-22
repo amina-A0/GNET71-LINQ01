@@ -4,7 +4,9 @@ using System.Text;
 
 namespace LINQAssignment01
 {
-    internal class Order
+    public class Order
     {
+        public string CustomerID { get; set; } = string.Empty;
+        public DateTime OrderDate { get; set; }
     }
 }
