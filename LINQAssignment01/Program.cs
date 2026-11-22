@@ -107,6 +107,21 @@ namespace LINQAssignment01
             }
 
             #endregion
+
+            #region Q8
+
+            var sortedByCategoryAndPrice = ProductList
+                .OrderBy(p => p.Category)
+                .ThenByDescending(p => p.UnitPrice);
+
+            foreach (var p in sortedByCategoryAndPrice)
+            {
+                Console.WriteLine(
+                    $"Category: {p.Category}, Name: {p.ProductName}, Price: {p.UnitPrice}"
+                );
+            }
+
+            #endregion
         }
     }
 }
