@@ -175,7 +175,23 @@ namespace LINQAssignment01
 
             #endregion
 
-            
+            #region Q12
+
+            string[] Arr = {
+    "aPPLE", "AbAcUs", "bRaNcH",
+    "BlUeBeRrY", "ClOvEr", "cHeRry"
+};
+
+            var sortedWords = Arr
+                .OrderBy(w => w.Length)
+                .ThenBy(w => w.ToLower());
+
+            foreach (var word in sortedWords)
+            {
+                Console.WriteLine(word);
+            }
+
+            #endregion
 
 
         }
