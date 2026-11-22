@@ -158,7 +158,24 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q11
 
+            var productPositions = ProductList.Select(
+                (p, index) => new
+                {
+                    Position = index + 1,
+                    ProductName = p.ProductName
+                }
+            );
+
+            foreach (var p in productPositions)
+            {
+                Console.WriteLine($"{p.Position}. {p.ProductName}");
+            }
+
+            #endregion
+
+            
 
 
         }
