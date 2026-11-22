@@ -36,6 +36,17 @@ namespace LINQAssignment01
 
             #endregion
 
+            #region Q3
+
+            var sortedProducts = ProductList.OrderBy(p => p.UnitPrice);
+
+            foreach (var p in sortedProducts)
+            {
+                Console.WriteLine($"Name: {p.ProductName}, Price: {p.UnitPrice}");
+            }
+
+            #endregion
+
         }
     }
 }
